@@ -8,5 +8,3 @@ const db = pgp({
 });
 
 module.exports = db;
-
-
