@@ -5,11 +5,11 @@ exports.getPosts = function () {
 };
 
 exports.getPost = function (id) {
-  return database.oneOrNone("select * from blog.post where id = $1", [id]);
+  return database.one("select * from blog.post where id = $1", [id]);
 };
 
 exports.savePost = function (post) {
-  return database.one(
+  return database.oneOrNone(
     "insert into blog.post (title, content) values ($1, $2) returning *",
     [post.title, post.content]
   );
