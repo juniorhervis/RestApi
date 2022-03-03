@@ -1,6 +1,6 @@
 const axios = require("axios");
 const crypto = require("crypto");
-const postService = require("../service/postService");
+const postService = require("../service/postsService");
 
 const generate = function () {
   return crypto.randomBytes(20).toString("hex");
